@@ -1,0 +1,16 @@
+<div id="footer">
+  <div class="container">
+    <br>
+    <ol class="breadcrumb">
+      <li>
+        <%= link_to 'Delayed::Job', 'https://github.com/collectiveidea/delayed_job' %> v<%= DelayedJobsManagement.delayed_job_version %>
+      </li>
+
+      <% if DelayedJobsManagement.enabled_recurring_jobs? %>
+        <li>
+          <%= link_to 'Delayed::RecurringJob', 'https://github.com/amitree/delayed_job_recurring' %> v<%= DelayedJobsManagement.delayed_job_recurring_version %>
+        </li>
+      <% end %>
+    </ol>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+<h3>Job Queues</h3>
+<nav class="nav" tabindex="-1">
+  <div class="container">
+    <%= link_to 'Overview', overview_path, class: active_class(overview_path) %>
+    <%= link_to 'Enqueued', jobs_path(type: :enqueued), class: active_class(jobs_path(type: :enqueued)) %>
+    <%= link_to 'Working', jobs_path(type: :working), class: active_class(jobs_path(type: :working)) %>
+    <%= link_to 'Pending', jobs_path(type: :pending), class: active_class(jobs_path(type: :pending)) %>
+    <%= link_to 'Failed', jobs_path(type: :failed), class: active_class(jobs_path(type: :failed)) %>
+  </div>
+</nav>

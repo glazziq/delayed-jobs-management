@@ -1,0 +1,30 @@
+<% if DelayedJobsManagement.enabled_recurring_jobs? %>
+  <h3>Recurring Jobs</h3>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Status</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @recurring_jobs.each do |recurring_job| %>
+        <% running = recurring_job.job&.scheduled? %>
+        <tr>
+          <td><%= recurring_job.name %></td>
+          <td>
+            <strong class="label  label-sm <%= running ? "label-b" : "label-c" %>">
+              <%= running ? "Running" : "Stopped" %>
+            </strong>
+          </td>
+          <td>
+            <%= link_to recurring_job_path(id: recurring_job.name), method: :patch, class: 'action' do %>
+              <%= running ? "Stop" : "Start" %>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% end %>

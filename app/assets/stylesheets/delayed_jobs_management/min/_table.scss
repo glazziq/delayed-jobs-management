@@ -1,0 +1,24 @@
+@if $import-tables == true {
+//-------------------------------------------------------------------
+//  Tables
+//-------------------------------------------------------------------
+
+.table {
+  @extend %w-100;
+  border-collapse: collapse;
+
+  th, td {
+    padding: .5em;
+    text-align: left;
+    display: table-cell;
+  }
+
+  td {
+    border-top: 1px solid #ddd;
+  }
+}
+
+
+//-------------------------------------------------------------------
+// End @if
+}

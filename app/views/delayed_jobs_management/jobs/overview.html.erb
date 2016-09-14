@@ -1,0 +1,30 @@
+<%= render 'delayed_jobs_management/jobs/recurring_jobs' %>
+<%= render 'delayed_jobs_management/jobs/queue_nav' %>
+
+<br>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Status</th>
+      <th>Count</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= link_to 'Enqueued Jobs', jobs_path(type: :enqueued) %></td>
+      <td><%= @enqueued_count %></td>
+    </tr>
+    <tr>
+      <td><%= link_to 'Working Jobs', jobs_path(type: :working) %></td>
+      <td><%= @working_count %></td>
+    </tr>
+    <tr>
+      <td><%= link_to 'Pending Jobs', jobs_path(type: :pending) %></td>
+      <td><%= @pending_count %></td>
+    </tr>
+    <tr>
+      <td><%= link_to 'Failed Jobs', jobs_path(type: :failed) %></td>
+      <td><%= @failed_count %></td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,12 @@
+<%= render 'delayed_jobs_management/jobs/recurring_jobs' %>
+<%= render 'delayed_jobs_management/jobs/queue_nav' %>
+
+<% if @jobs.present? %>
+  <% @jobs.each do |job| %>
+    <%= render partial: 'job', locals: { job: job } %>
+  <% end %>
+<% else %>
+  <div class="msg msg-warning">
+    No <%= params[:type] %> jobs were found
+  </div>
+<% end %>

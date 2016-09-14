@@ -1,0 +1,41 @@
+<div class="panel">
+  <table class="table job">
+    <tbody>
+      <tr>
+        <th>ID</th>
+        <td><%= job.id %></td>
+      </tr>
+      <tr>
+        <th>Priority</th>
+        <td><%= job.priority %></td>
+      </tr>
+      <tr>
+        <th>Attempts</th>
+        <td><%= job.attempts %></td>
+      </tr>
+      <tr>
+        <th>Handler</th>
+        <td><pre><%= job.handler %></pre></td>
+      </tr>
+      <% if job.last_error %>
+        <tr>
+          <th>Error</th>
+          <td><pre><%= job.last_error %></pre></td>
+        </tr>
+      <% end %>
+      <tr>
+        <th>Run at</th>
+        <td><%= time_ago_in_words(job.run_at) %></td>
+      </tr>
+      <tr>
+        <td colspan=2 align='right'>
+          <ol class="breadcrumb text-right">
+            <li><%= link_to('Retry', job_requeue_path(job), method: :post) %></li>
+            <li><%= link_to('Reload', job_reload_path(job), method: :post) %></li>
+            <li><%= link_to('Remove', job_remove_path(job), method: :delete) %></li>
+          </ol>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

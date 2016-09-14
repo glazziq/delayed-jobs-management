@@ -1,0 +1,26 @@
+@if $import-breadcrumbs == true {
+//-------------------------------------------------------------------
+//  Internet Explorer Hacks
+//-------------------------------------------------------------------
+
+//  no hacks (outside of the ie grid hack found in the grid.scss file)
+
+.breadcrumb {
+  padding: 8px 0px;
+  margin: 0px;
+  list-style: none;
+
+  & > li {
+    display: inline-block;
+
+    & + li:before {
+      padding: 0 5px;
+      color: $c-grey;
+      content: "/\00a0";
+    }
+  }
+}
+
+//-------------------------------------------------------------------
+// End @if
+}

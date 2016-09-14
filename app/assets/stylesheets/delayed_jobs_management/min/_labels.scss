@@ -1,0 +1,68 @@
+//-------------------------------------------------------------------
+// Button Colors
+//-------------------------------------------------------------------
+
+$l-a-bg:           #0ae;
+$l-b-bg:           #3c5;
+$l-c-bg:           #d33;
+
+//-------------------------------------------------------------------
+// Mixin to set btn background for inactive, active & hover states
+//-------------------------------------------------------------------
+
+// set default variables to be base button colors.
+@mixin label-style ($bg: $c-off-black) {
+  background: $bg;
+}
+
+
+
+@if $import-labels == true {
+//-------------------------------------------------------------------
+// Button Styles & Classes
+//-------------------------------------------------------------------
+
+// Set Generic <button> and .btn styling.
+// use .btn on any element to give it the styling of a button
+.label {
+  // @extend %txt-large;
+  @extend %no-underline;
+  @include label-style;
+  border: 0;
+  border-radius: 6px; // rounded corners
+  color: $c-white;
+  display: inline-block; // Enables non-inline-block elements like <a>s to be buttons
+  margin: .2em .3em .2em 0;
+  padding: 12px 30px 14px;
+}
+
+
+// Set colors for your buttons, see the button mixin at the top of this
+// file to see how the hex colors are allocated
+.label-a {
+  @include label-style($l-a-bg);
+}
+
+.label-b {
+  @include label-style($l-b-bg);
+}
+
+.label-c {
+  @include label-style($l-c-bg);
+}
+
+
+// Add this class to a <button> or element with a .btn class
+// to create a smaller sized button.
+.label-sm {
+  @extend %shared-font-size;
+  border-radius: 4px; /* rounded corners */
+  padding: 6px 10px 6px;
+}
+
+
+
+
+//-------------------------------------------------------------------
+// End @if
+}

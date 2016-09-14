@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DelayedJobsManagement</title>
+  <%= stylesheet_link_tag    "delayed_jobs_management/application", media: "all" %>
+  <%= javascript_include_tag "delayed_jobs_management/application" %>
+  <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+
+  <div id="layout">
+    <div class="container">
+      <%= yield %>
+
+    </div>
+    <div id='layout_footer'></div>
+  </div>
+
+  <%= render 'layouts/delayed_jobs_management/footer' %>
+
+</body>
+</html>

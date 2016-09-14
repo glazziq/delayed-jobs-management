@@ -1,0 +1,11 @@
+
+$p-gray: #f6f6f6;
+
+@if $import-panels == true {
+  .panel {
+    background: $p-gray;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 1em;
+  }
+}
