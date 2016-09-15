@@ -36,11 +36,13 @@ describe DelayedJobsManagement::JobsController, type: :controller do
     describe "recurring jobs" do
       it 'set @recurring_jobs variable if it is enabled' do
         allow(DelayedJobsManagement).to receive(:enabled_recurring_jobs?).and_return(true)
+        allow(DelayedJobsManagement).to receive(:recurring_jobs).and_return([])
         get :index
         expect(assigns(:recurring_jobs)).to eq(Array.new)
       end
       it 'not set @recurring_jobs variable if it is disabled' do
         allow(DelayedJobsManagement).to receive(:enabled_recurring_jobs?).and_return(false)
+        allow(DelayedJobsManagement).to receive(:recurring_jobs).and_return([])
         get :index
         expect(assigns(:recurring_jobs)).to be_nil
       end
@@ -80,6 +82,7 @@ describe DelayedJobsManagement::JobsController, type: :controller do
     describe "recurring jobs" do
       it 'set @recurring_jobs variable if it is enabled' do
         allow(DelayedJobsManagement).to receive(:enabled_recurring_jobs?).and_return(true)
+        allow(DelayedJobsManagement).to receive(:recurring_jobs).and_return([])
         get :overview
         expect(assigns(:recurring_jobs)).to eq(Array.new)
       end
@@ -118,7 +121,7 @@ describe DelayedJobsManagement::JobsController, type: :controller do
         put :requeue, { job_id: job.id }
         job.reload
       end
-      
+
       it 'run_at to be now' do
         expect(job.run_at).to be_within(1.second).of Time.now
       end
