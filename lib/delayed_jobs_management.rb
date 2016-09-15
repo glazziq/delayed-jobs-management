@@ -5,12 +5,15 @@ module DelayedJobsManagement
     attr_accessor :recurring_jobs
 
     def config &block
-      recurring_jobs = []
       instance_eval(&block)  if block_given?
     end
 
+    def recurring_jobs
+      @recurring_jobs || []
+    end
+
     def delayed_job_version
-      Gem.loaded_specs['delayed_job'].version.to_s
+      Gem.loaded_specs['delayed_job'].try(:version).try(:to_s)
     end
 
     def enabled_recurring_jobs?
@@ -18,7 +21,7 @@ module DelayedJobsManagement
     end
 
     def delayed_job_recurring_version
-      Gem.loaded_specs['delayed_job_recurring'].version.to_s
+      Gem.loaded_specs['delayed_job_recurring'].try(:version).try(:to_s)
     end
   end
 end

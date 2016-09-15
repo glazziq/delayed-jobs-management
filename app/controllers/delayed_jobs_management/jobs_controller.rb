@@ -3,7 +3,7 @@ module DelayedJobsManagement
     layout 'layouts/delayed_jobs_management/application'
 
     before_action :set_job, except: [:index, :overview]
-    before_action :set_recurring_jobs, only: [:index, :overview]
+    before_action :set_recurring_jobs, only: [:index, :overview], if: proc { DelayedJobsManagement.enabled_recurring_jobs? }
 
     def index
       params[:type] ||= :all

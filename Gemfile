@@ -13,8 +13,10 @@ gemspec
 
 # To use a debugger
 # gem 'byebug', group: [:development, :test]
-gem 'rails', '~> 4.2.0'
+gem 'rails', '4.2.0'
 gem 'pg'
+gem 'puma'
+gem 'sass-rails'
 
 # Background jobs
 gem 'delayed_job_active_record'
