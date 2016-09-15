@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/glazziq/delayed-jobs-management.svg?branch=master)](https://travis-ci.org/glazziq/delayed-jobs-management)
 [![Code Climate](https://codeclimate.com/github/glazziq/delayed-jobs-management/badges/gpa.svg)](https://codeclimate.com/github/glazziq/delayed-jobs-management)
-[![Test Coverage](https://codeclimate.com/github/glazziq/delayed-jobs-management/badges/coverage.svg)](https://codeclimate.com/github/glazziq/delayed-jobs-management/coverage)
+[![Coverage Status](https://coveralls.io/repos/github/glazziq/delayed-jobs-management/badge.svg?branch=master)](https://coveralls.io/github/glazziq/delayed-jobs-management?branch=master)
 
 # DelayedJobsManagement
 
