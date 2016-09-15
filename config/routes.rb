@@ -5,8 +5,8 @@ DelayedJobsManagement::Engine.routes.draw do
 
   resources :jobs, only: [:index] do
     delete :remove
-    post :requeue
-    post :reload
+    put :requeue
+    put :reload
   end
   resources :recurring_jobs, only: [:update]
 end

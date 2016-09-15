@@ -1,5 +1,5 @@
 FactoryGirl.define do
-  factory :delayed_job do
+  factory :delayed_job, class: Delayed::Job do
     handler 'test'
     run_at { Time.now + 2.days }
     queue 'default'
@@ -9,6 +9,7 @@ FactoryGirl.define do
     end
 
     trait :failed do
+      attempts 1
       last_error 'last errors'
     end
 
