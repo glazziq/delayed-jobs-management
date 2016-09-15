@@ -39,3 +39,7 @@ group :development, :test do
 
   gem 'guard-livereload', '~> 2.5', require: false # automatically reload your browser when 'view' files are modified.
 end
+
+group :test do
+  gem 'simplecov', require: false
+end
