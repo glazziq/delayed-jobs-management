@@ -1,3 +1,5 @@
+require_relative File.expand_path("../application_controller.rb", __FILE__)
+
 module DelayedJobsManagement
   class RecurringJobsController < ApplicationController
     layout 'layouts/delayed_jobs_management/application'

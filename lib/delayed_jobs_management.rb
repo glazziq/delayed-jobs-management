@@ -16,12 +16,12 @@ module DelayedJobsManagement
       Gem.loaded_specs['delayed_job'].try(:version).try(:to_s)
     end
 
-    def enabled_recurring_jobs?
-      DelayedJobsManagement.delayed_job_recurring_version.present?
-    end
-
     def delayed_job_recurring_version
       Gem.loaded_specs['delayed_job_recurring'].try(:version).try(:to_s)
+    end
+
+    def enabled_recurring_jobs?
+      DelayedJobsManagement.delayed_job_recurring_version.present?
     end
   end
 end
