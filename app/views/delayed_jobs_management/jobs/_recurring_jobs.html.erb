@@ -21,8 +21,8 @@
               </strong>
             </td>
             <td>
-              <%= link_to recurring_job_path(id: recurring_job.name), method: :patch, class: 'action' do %>
-                <%= running ? "Stop" : "Start" %>
+              <%= form_tag recurring_job_path(id: recurring_job.name), method: :patch, class: 'link' do %>
+                <%= submit_tag((running ? "Stop" : "Start"), class: 'action') %>
               <% end %>
             </td>
           </tr>

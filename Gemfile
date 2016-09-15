@@ -17,6 +17,8 @@ gem 'rails', '4.2.0'
 gem 'pg'
 gem 'puma'
 gem 'sass-rails'
+gem 'jquery-rails'
+
 
 # Background jobs
 gem 'delayed_job_active_record'

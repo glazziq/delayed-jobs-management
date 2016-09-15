@@ -3,36 +3,52 @@
 //  Form Elements
 //-------------------------------------------------------------------
 
-form > * {
-  display: block;
-  margin-bottom: 10px;
+// form > * {
+//   display: block;
+//   margin-bottom: 10px;
+// }
+//
+// label > * {
+//   display: inline;
+// }
+//
+// input, textarea {
+//   @extend %shared-font-size;
+//   border: 1px solid $c-grey;
+//   padding: 8px;
+//
+//   &:focus {
+//     border-color: $c-focus;
+//   }
+// }
+//
+//
+// input[type='text'], textarea {
+//   -webkit-appearance: none; // make iOS inputs pretty
+//   width: 13em;
+// }
+//
+//
+// .addon {
+//   @extend %shared-font-size;
+//   box-shadow: 0 0 0 1px $c-grey;
+//   padding: 8px 12px;
+// }
+
+form.link {
+  display: inline-block;
 }
 
-label > * {
-  display: inline;
-}
+[type=submit].action {
+  @extend %no-underline;
+  color: $c-dark;
+  border: none;
+  cursor: pointer;
+  padding: 0;
 
-input, textarea {
-  @extend %shared-font-size;
-  border: 1px solid $c-grey;
-  padding: 8px;
-
-  &:focus {
-    border-color: $c-focus;
+  &:hover {
+    color: $c-off-black;
   }
-}
-
-
-input[type='text'], textarea {
-  -webkit-appearance: none; // make iOS inputs pretty
-  width: 13em;
-}
-
-
-.addon {
-  @extend %shared-font-size;
-  box-shadow: 0 0 0 1px $c-grey;
-  padding: 8px 12px;
 }
 
 
