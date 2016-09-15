@@ -13,3 +13,25 @@ gemspec
 
 # To use a debugger
 # gem 'byebug', group: [:development, :test]
+gem 'rails', '~> 4.2.0'
+gem 'pg'
+
+# Background jobs
+gem 'delayed_job_active_record'
+gem 'delayed_job_recurring'
+
+group :development, :test do
+  # RSpec
+  gem 'rspec-rails', '~> 3.4'
+  gem 'factory_girl_rails', '4.5.0'
+  gem 'guard-rspec', require: false
+  gem 'spring-commands-rspec'
+
+  # Dev / Testing tools
+  gem 'pry-rails', '0.3.4'
+  gem 'pry-byebug', '3.1.0'
+
+  gem 'database_cleaner', '1.4.1'
+
+  gem 'guard-livereload', '~> 2.5', require: false # automatically reload your browser when 'view' files are modified.
+end
