@@ -6,19 +6,19 @@
 
 ## Usage
 
-1. install gem
+1 install gem
 
 ```ruby
 gem 'delayed_jobs_management'
 ```
 
-2. add routes
+2 add routes
 
 ```ruby
   mount DelayedJobsManagement::Engine => "/delayed_job"
 ```
 
-3. *Option* recurring jobs management
+3 *Option* recurring jobs management
 
 ```ruby
 # config/initailzers/delayed_jobs_management.rb
@@ -35,5 +35,7 @@ end
 |----------|----------|
 |`name`| name of recurring job that you want|
 |`job`| class name of recurring job|
+
+---
 
 This project rocks and uses MIT-LICENSE.
