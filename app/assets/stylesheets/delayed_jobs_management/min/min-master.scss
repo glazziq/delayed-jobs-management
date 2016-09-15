@@ -15,9 +15,9 @@
 
 $import-headings:                         true !default;
 
-$import-buttons:                          true !default;
+$import-buttons:                          false !default;
 
-$import-forms:                            true !default;
+$import-forms:                            false !default;
 
 $import-navbar:                           true !default;
 
@@ -27,9 +27,7 @@ $import-messages:                         true !default;
 
 $import-icons:                            false !default;
 
-$import-grid:                             true !default;
-
-$import-messages:                         true !default;
+$import-grid:                             false !default;
 
 $import-ie-hacks:                         false !default;
 
@@ -38,6 +36,8 @@ $import-labels:                           true !default;
 $import-panels:                           true !default;
 
 $import-breadcrumbs:                      true !default;
+
+$import-sticky-footer:                    true !default;
 
 
 // ------------------------------------------------------------------

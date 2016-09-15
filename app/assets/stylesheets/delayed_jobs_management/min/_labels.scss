@@ -39,9 +39,9 @@ $l-c-bg:           #d33;
 
 // Set colors for your buttons, see the button mixin at the top of this
 // file to see how the hex colors are allocated
-.label-a {
-  @include label-style($l-a-bg);
-}
+// .label-a {
+//   @include label-style($l-a-bg);
+// }
 
 .label-b {
   @include label-style($l-b-bg);

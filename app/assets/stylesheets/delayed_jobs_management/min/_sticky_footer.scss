@@ -19,4 +19,8 @@
   }
 }
 
+@if $import-sticky-footer == true {
+
 @include sticky-footer(70px, "#layout", "#layout_footer", "#footer");
+
+}

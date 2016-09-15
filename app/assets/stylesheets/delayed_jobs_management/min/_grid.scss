@@ -1,3 +1,8 @@
+
+%w-100 {
+  width: 100%;
+}
+
 @if $import-grid == true {
 //-------------------------------------------------------------------
 //  Grid system responsive code is in _general.scss
@@ -6,10 +11,6 @@
 // (((its number/12) * 100)-2) percent (truncated, to avoid spillage.)
 // Thus, c12 has width 98%.
 //-------------------------------------------------------------------
-
-%w-100 {
-  width: 100%;
-}
 
 .row {
   margin: 1% 0;

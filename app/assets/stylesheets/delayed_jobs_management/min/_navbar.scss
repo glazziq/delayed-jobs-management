@@ -48,7 +48,8 @@
 }
 
 .btn.btn-close {
-  background: $c-black;
+  background: none;
+  color: $c-grey;
   display: none;
   float: right;
   font-size: 25px;
@@ -75,7 +76,7 @@
     }
 
     & div:before {
-      background: $c-black;
+      color: $c-grey;
       border-top: 3px solid;
       border-bottom: 10px double;
       content: '';
@@ -83,7 +84,7 @@
       height: 4px;
       position: relative;
       right: 3px;
-      top: 14px;
+      top: 4px;
       width: 20px;
     }
 

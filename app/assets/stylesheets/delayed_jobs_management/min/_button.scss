@@ -58,9 +58,9 @@ $c--active:       #b22;
 
 // Set colors for your buttons, see the button mixin at the top of this
 // file to see how the hex colors are allocated
-.btn-a {
-  @include btn-style($a--bg, $a--hover, $a--active);
-}
+// .btn-a {
+//   @include btn-style($a--bg, $a--hover, $a--active);
+// }
 
 .btn-b {
   @include btn-style($b--bg, $b--hover, $b--active);

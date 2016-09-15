@@ -1,3 +1,8 @@
+Glazziq Note
+========
+command to compile scss to css
+`sass --style expanded --watch min-master.scss:min.css`
+
 min sass
 ========
 
