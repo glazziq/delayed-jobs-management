@@ -3,7 +3,7 @@ PATH
   specs:
     delayed_jobs_management (0.0.1)
       delayed_job
-      rails (~> 4.2.0)
+      rails (>= 4.2.0)
 
 GEM
   remote: https://rubygems.org/
@@ -268,4 +268,4 @@ DEPENDENCIES
   spring-commands-rspec
 
 BUNDLED WITH
-   1.12.5
+   1.13.6
