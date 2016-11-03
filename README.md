@@ -4,6 +4,9 @@
 
 # DelayedJobsManagement
 
+## Support
+Rails >= 4.2.0, 5.0.0
+
 ## Usage
 
 1 install gem
@@ -15,7 +18,7 @@ gem 'delayed_jobs_management'
 2 add routes
 
 ```ruby
-  mount DelayedJobsManagement::Engine => "/delayed_job"
+  mount DelayedJobsManagement::Engine => "/delayed_jobs"
 ```
 
 3 *Option* recurring jobs management
