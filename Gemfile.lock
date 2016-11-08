@@ -4,6 +4,7 @@ PATH
     delayed_jobs_management (0.0.1)
       delayed_job
       rails (>= 4.2.0)
+      sass-rails
 
 GEM
   remote: https://rubygems.org/
