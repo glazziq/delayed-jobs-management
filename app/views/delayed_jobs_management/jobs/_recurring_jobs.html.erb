@@ -2,7 +2,7 @@
   <h3>Recurring Jobs</h3>
 
   <% if @recurring_jobs.present? %>
-    <table class="table">
+    <table class="table hover-table recurring_jobs">
       <thead>
         <tr>
           <th>Name</th>
@@ -16,9 +16,11 @@
           <tr>
             <td>
               <% if recurring_job.name.present? %>
-                <%= recurring_job.name %>
+                <span class="desc"><%= recurring_job.name %></span>
+                <br/>
+                <span class="job_class"><%= recurring_job.job.to_s %></span>
               <% else %>
-                <%= recurring_job.job.to_s %>
+                <span class="desc"><%= recurring_job.job.to_s %></span>
               <% end %>
             </td>
             <td>
@@ -27,7 +29,7 @@
               </strong>
             </td>
             <td>
-              <%= form_tag recurring_job_path(id: recurring_job.name), method: :patch, class: 'link' do %>
+              <%= form_tag recurring_job_path(id: recurring_job.job), method: :patch, class: 'link' do %>
                 <%= submit_tag((running ? "Stop" : "Start"), class: 'action') %>
               <% end %>
             </td>

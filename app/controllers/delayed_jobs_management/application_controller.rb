@@ -1,7 +1,8 @@
 class DelayedJobsManagement::ApplicationController < ActionController::Base
   layout 'layouts/delayed_jobs_management/application'
 
-  private
+  protected
+
   def delayed_job
     begin
       Delayed::Job

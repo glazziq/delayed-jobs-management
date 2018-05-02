@@ -24,15 +24,15 @@ describe DelayedJobsManagement::RecurringJobsController, type: :controller do
     context 'start scheduled' do
       it 'create scheduled job and first delayed job' do
         expect {
-          get :update, { id: scheduled_job[:name] }
+          get :update, { id: scheduled_job[:job] }
         }.to change(Delayed::Job, :count).by(2)
       end
     end
     context 'stop scheduled' do
       it 'remove scheduled job' do
-        get :update, { id: scheduled_job[:name] } # start scheduled
+        get :update, { id: scheduled_job[:job] } # start scheduled
         expect {
-          get :update, { id: scheduled_job[:name] }
+          get :update, { id: scheduled_job[:job] }
         }.to change(Delayed::Job, :count).by(-1)
       end
     end
