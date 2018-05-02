@@ -18,9 +18,10 @@
               <% if recurring_job.name.present? %>
                 <span class="desc"><%= recurring_job.name %></span>
                 <br/>
-                <span class="job_class"><%= recurring_job.job.to_s %></span>
+                <span class="job_class"><%= recurring_job.job.to_s %> <%= display_run_interval(recurring_job.job) %></span>
               <% else %>
                 <span class="desc"><%= recurring_job.job.to_s %></span>
+                <span class="job_class"><%= display_run_interval(recurring_job.job) %></span>
               <% end %>
             </td>
             <td>
