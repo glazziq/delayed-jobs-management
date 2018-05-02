@@ -15,6 +15,10 @@
 
 @import 'min/min-master';
 
+pre {
+  white-space: pre-wrap;
+}
+
 .panel {
   border: transparent 1px solid;
   &.hover-panel {
