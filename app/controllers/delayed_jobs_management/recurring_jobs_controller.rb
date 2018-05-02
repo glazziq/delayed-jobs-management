@@ -7,7 +7,7 @@ module DelayedJobsManagement
     before_action :set_recurring_jobs
 
     def update
-      @recurring_job = @recurring_jobs.find { |job| job.name == params[:id] }&.job
+      @recurring_job = @recurring_jobs.find { |job| job.job.to_s == params[:id] }&.job
       @recurring_job&.scheduled? ? @recurring_job&.unschedule : @recurring_job&.schedule!
       redirect_to overview_url
     end

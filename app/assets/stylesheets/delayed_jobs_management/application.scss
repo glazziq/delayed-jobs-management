@@ -15,6 +15,22 @@
 
 @import 'min/min-master';
 
+.panel {
+  border: transparent 1px solid;
+  &.hover-panel {
+    border: #e2e1e1 1px solid;
+  }
+}
+
+table {
+  &.hover-table {
+    tr {
+      &:hover {
+        background: #f3f2f2;
+      }
+    }
+  }
+}
 table.job {
   th, td {
     border: none;
@@ -25,5 +41,14 @@ table.job {
     width: 100px;
     font-weight: normal;
     color: #aaa;
+  }
+}
+
+table.recurring_jobs {
+  td {
+    .job_class {
+      font-size: 0.8rem;
+      color: gray;
+    }
   }
 }
