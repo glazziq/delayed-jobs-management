@@ -22,12 +22,12 @@ module DelayedJobsManagement
 
     def remove
       @job.delete
-      redirect_to :back
+      redirect_to request.referrer
     end
 
     def requeue
       @job.update_attributes(run_at: Time.now, failed_at: nil)
-      redirect_to :back
+      redirect_to request.referrer
     end
 
     def reload
@@ -39,7 +39,7 @@ module DelayedJobsManagement
         last_error: nil,
         attempts: 0
       )
-      redirect_to :back
+      redirect_to request.referrer
     end
 
     private
