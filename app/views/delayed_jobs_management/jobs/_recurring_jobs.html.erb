@@ -14,7 +14,13 @@
         <% @recurring_jobs.each do |recurring_job| %>
           <% running = recurring_job.job&.scheduled? %>
           <tr>
-            <td><%= recurring_job.name %></td>
+            <td>
+              <% if recurring_job.name.present? %>
+                <%= recurring_job.name %>
+              <% else %>
+                <%= recurring_job.job.to_s %>
+              <% end %>
+            </td>
             <td>
               <strong class="label  label-sm <%= running ? "label-b" : "label-c" %>">
                 <%= running ? "Running" : "Stopped" %>
