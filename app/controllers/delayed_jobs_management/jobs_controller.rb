@@ -1,4 +1,4 @@
-require_relative File.expand_path("../application_controller.rb", __FILE__)
+require File.expand_path('../application_controller.rb', __FILE__)
 
 module DelayedJobsManagement
   class JobsController < ApplicationController

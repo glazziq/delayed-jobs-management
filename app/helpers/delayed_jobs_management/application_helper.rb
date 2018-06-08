@@ -24,12 +24,18 @@ module DelayedJobsManagement
 
       text = ''
       text += "every #{display_interval}" if display_interval.present?
-      text += " at #{recurring_job_class.run_at.join(', ')}" \
+      text += " at #{display_run_at(recurring_job_class.run_at)}" \
         if recurring_job_class.run_at.present?
       text += " (#{recurring_job_class.timezone})" \
         if recurring_job_class.timezone.present?
       text = '----=> ' + text if text.present?
       text
+    end
+
+    def display_run_at(run_at)
+      return run_at.strftime('%d/%m/%Y %H:%M %z') if run_at.is_a?(Time)
+      return run_at.join(', ') if run_at.is_a?(Array)
+      run_at
     end
   end
 end
